@@ -16,6 +16,7 @@ export const CategoryFilter = ({ categories }: CategoryFilterProps) => {
 
     newSearchParams.set('category', category)
 
+    // Remove the category filter if it's already selected
     if (searchParams.get('category') === category) {
       newSearchParams.delete('category')
     }

@@ -19,6 +19,7 @@ export const RatingFilter = () => {
 
     newSearchParams.set('rating', String(newRate))
 
+    // Remove the rating filter if the user clicks on the 1 star rating again
     if (newRate === 1 && rateSearchParam === newRate) {
       newSearchParams.delete('rating')
       setRate(0)
